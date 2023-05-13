@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="page1.css">
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function login() {
+            var user = document.getElementById("uname").value;
+            var pass = document.getElementById("passwd").value;
+
+            var userfil = /^[a-zA-Z0-9+_.-]+$/;
+            var passfil = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+            if (user == '')
+                alert("Please enter USERNAME")
+            else if (pass == '')
+                alert("Please enter PASSWORD")
+            else if (!userfil.test(user))
+                alert("Enter VALID USERNAME..!");
+            else if (pass.length < 8 || pass.length > 16)
+                alert("Password Minimum length is 8 and Maximum length is 16.");
+            else if (!passfil.test(pass))
+                alert("Enter VALID PASSWORD : password must contain atleast one special character and number");
+            else
+                alert("LOGIN SUCCESFUL");
+        }
+        function clearFunc() {
+            var user = document.getElementById("user_name").value = "";
+            var pass = document.getElementById("pwd").value = "";
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Login</h1>
+    <form class="container">
+        <label for="uname">Username</label>
+        <input type="text" name="uname" id="uname">
+        <label for="passwd">Password</label>
+        <input type="password" name="passwd" id="passwd">
+        <div class="btnalign">
+            <button type="submit" class="loginbtn" onclick="login()">Submit</button>
+            <button type="submit" class="loginbtn" onclick="clearFunc()">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

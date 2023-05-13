@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+.container{
+    width: 30%;
+    padding: 16px;
+    margin: auto;
+}
+input[type='text'], input[type='password']{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.loginbtn {
+    background-color: #8dc6ff;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin: auto; 
+    display: inline;
+    opacity: 0.9;
+}
+.btnalign{
+    display: flex;
+    justify-content: space-around;
+}
